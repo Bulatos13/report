@@ -3,7 +3,7 @@
 let navs = Array.from(document.querySelectorAll('.nav-btn'));
 let ind = Array.from(document.querySelectorAll('.content-cell-title-border-bottom'));
 let pos = 1;
-for(let i = 0; i < 5; i++){
+for(let i = 0; i < 4; i++){
 	navs[i].addEventListener('click', () => {
 		pos ++;
 		if(pos % 2 == 0){
@@ -16,45 +16,22 @@ for(let i = 0; i < 5; i++){
 	})
 }
 
-
-function isVisible(elem) {
-
-  let coords = elem.getBoundingClientRect;
-
-  let windowHeight = document.documentElement.clientHeight;
-
-  // верхний край элемента виден?
-  let topVisible = coords.top > 0 && coords.top < windowHeight;
-
-  // нижний край элемента виден?
-  let bottomVisible = coords.bottom > windowHeight && coords.bottom < 0;
-
-  return topVisible || bottomVisible;
+let btn = Array.from(document.querySelectorAll('.nav-btn'));
+let topArray = Array.from(document.querySelectorAll('.content-cell-title'));
+console.log(topArray[1].getBoundingClientRect().top);
+for( let i = 0; i < 4; i++ ){
+	btn[i].addEventListener('click', () => {
+		let path = topArray[i].getBoundingClientRect().top + window.pageYOffset - 100;
+		window.scrollTo(0, path);
+	});
 }
 
-let header = document.querySelector('.header');
-function showVisible() {
-	if( isVisible('.header') ) {
-		header.style.backgroundColor = 'red';
+document.addEventListener('scroll', () => {
+	let coord = document.documentElement.getBoundingClientRect().top;
+	if( window.pageYOffset >= 500 ){
+		document.getElementById('opacity').style.opacity = 1;
+  	} else if ( coord == 0 ){
+  		document.getElementById('opacity').style.opacity = 0;
 	}
-}
+})
 
-
-showVisible();
-window.onscroll = showVisible;
-/*
-let position = document.querySelector('.container');
-let pravda = isVisible(position);
-if( pravda = true ) {
-	document.querySelector('.header-repeat-box').style.opacity = 1;
-	console.log("ura");
-}
-
-let runningAuthor = document.documentElement;
-
-runningAuthor.addEventListener('scroll', () => {
-	runningAuthor.style.left = 30 + 'px';
-	runningAuthor.style.top = 30 + 'px';
-	runningAuthor.style.position = 'sticky';
-	runningAuthor.style.backgroundColor = 'red';
-})*/
