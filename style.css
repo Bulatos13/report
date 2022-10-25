@@ -1,0 +1,142 @@
+*,*:before,*:after{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body{
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+}
+.flex-wrapper-right{
+	width: 100%;
+	max-width: 1200px;
+}
+.container{
+	width: 100%;
+	max-width: 1200px;
+	background-color: #fff;
+	position: absolute;
+
+	font-size: 20px;
+}
+.header{
+	width: 100%;
+	height: 400px;
+	position: relative;
+}
+.title{
+	width: 500px;
+	height: 300px;
+	background-color: #CFF6F1;
+	margin: 0 auto;
+	margin-top: 50px;
+	border-radius: 10px;
+	font-size: 40px;
+	padding-top: 110px;
+	text-align: center;
+}
+.author{
+	width: 300px;
+	height: 40px;
+	font-size: 16px;
+	margin: 0 auto;
+}
+.content{
+	width: 100%;
+}
+.content-cell{
+	width: 100%;
+	max-width: 900px;
+	margin: 50px auto;
+}
+.plan-tracer{
+
+	width: 50px;
+	height: 50px;
+	background-color: #FF4F33;
+	border-radius: 50%;
+	box-shadow: 0 0 30px #FF4F33;
+}
+.plan-box{
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.plan{
+	margin-left: 30px;
+}
+.content-cell-title{
+	width: 100px;
+	margin: 0 auto;
+}
+.content-cell-title-border-bottom{
+	display: block;
+	width: 100px;
+	height: 8px;
+	margin: 0 auto;
+	background-color: gold;
+	box-shadow: 0px -10px 20px 1px gold;
+	transition: ease .8s;
+	margin-bottom: 30px;
+}
+.text{
+	display: block;
+	text-align: justify;
+}
+.img{
+	margin: 40px auto;
+	width: 345px;
+}
+.img-three{
+	margin: 30px auto;
+	width: 800px;
+}
+.img-four{
+	width: 800px;
+	margin: 30px auto;
+}
+.img-two{
+	width: 400px;
+	margin: 40px auto;
+}
+
+
+#header-repeat-box{
+	width: 100%;
+	max-width: 300px;
+	height: 1000px;
+	position: fixed;
+	top: 30px;
+	left: 40px;
+	float: left;
+	z-index: 2;
+}
+#opacity{
+	width: 300px;
+	opacity: 0;
+	transition: 2s;
+}
+.nav-box{
+	width: 100px;
+	height: 600px;
+	position: absolute;
+	right: 0px;
+	bottom: 40px;
+}
+.nav-btn{
+	width: 60px;
+	height: 60px;
+	border-radius: 4px;
+	background-color: #FF4F33;
+	margin: 30px auto;
+	cursor: pointer;
+}
+.position{
+	width: 0;
+	height: 0;
+}
